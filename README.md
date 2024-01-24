@@ -21,10 +21,6 @@ WHERE LENGTH(name) > 10;
 
 SELECT DISTINCT first_name FROM Staff  
 WHERE adopted BETWEEN ‘01/01/2008’ AND ‘31/12/2008’;  
-ИЛИ  
-WHERE TO_CHAR (adopted, '9999') = '2008';  
-ИЛИ  
-WHERE adopted TO_CHAR ('2008', '9999');  
 
 ---
 ### Задача 5. Как получить детали описания объектов с ID 4 и 9 таблицы Trip?   
