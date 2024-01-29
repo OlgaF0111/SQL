@@ -43,14 +43,14 @@ WHERE ID in (4,9);
 | surname |        
 | ------- | 
 | Asanov  | 
-| Berukov|
+| Berukov |
 | Savicov |
 | Serikov | 
 | Sidorov | 
-| Demidov| 
+| Demidov | 
 | Ivanov  | 
 | Petrov  | 
-| Radov  |
+| Radov   |
 | Zaikov  |
   
 SELECT DISTINCT surname FROM Trip  
@@ -68,5 +68,15 @@ SELECT products FROM bd;
 WHERE price <=1000;  
 
 ---
+
+### Задача 9. Имеется две таблицы:  
+* Таблица users : Хранит в себе данные пользователя: user_id , login , name , surname (идентификатор, логин, имя и фамилию)   
+* Таблица pets : Содержит в себе информацию о питомцах пользователя: user_id, pet_id , type, nickname, breed (Идентификатор пользователя (внешний ключ), идентификатор животного, вид животного, его кличку и породу)
+  Напишите SQL-запрос, возвращающий фамилию и имя всех владельцев котов Абиссинской (Abyssinian) породы. ++ Отсортировать по алфавиту  
+
+SELECT DISTINCT (surname, name) FROM users JOIN pets  
+ON users. user_id = pets. user_id  
+WHERE type = ‘Abyssinian’  
+ORDER BY surname;  
 
 	
