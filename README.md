@@ -79,4 +79,12 @@ ON users. user_id = pets. user_id
 WHERE type = ‘Abyssinian’  
 ORDER BY surname;  
 
+---
+
+### Задача 10. Найти клиентов, которые совершили больше всего заказов.  
+
+SELECT * FROM bd  
+WHERE orders= (SELECT MAX(orders) FROM bd);  
+
+---
 	
