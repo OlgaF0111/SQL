@@ -7,7 +7,7 @@ WHERE name LIKE '%a%';
 ---
 ### Задача 2. Таблица Staff. Получить список всех сотрудников, у которых зарплата  (salary) в промежутке от 8000 до 9000 (включительно).  
 
-SELECT * FROM Staff.  
+SELECT * FROM Staff  
 WHERE salary BETWEEN 8000 AND 9000;  
 
 ---
@@ -17,7 +17,7 @@ SELECT * FROM Staff
 WHERE LENGTH(name) > 10;  
 
 ---
-### Задача 4. Таблица Staff.  Получить список всех сотрудников (first_name),  которые пришли на работу (adopted) в 2008ом году  
+### Задача 4. Таблица Staff.  Получить список всех сотрудников (first_name),  которые пришли на работу (adopted) в 2008-ом году  
 
 SELECT DISTINCT first_name FROM Staff  
 WHERE adopted BETWEEN ‘01/01/2008’ AND ‘31/12/2008’;  
@@ -64,7 +64,7 @@ SELECT name  AVG (age) FROM bd;
 ---
 ### Задача 8. Получить список продуктов (products), цена (price) которых не превышает 1000 рублей.  
 
-SELECT products FROM bd;  
+SELECT products FROM bd  
 WHERE price <=1000;  
 
 ---
@@ -72,7 +72,7 @@ WHERE price <=1000;
 ### Задача 9. Имеется две таблицы:  
 * Таблица users : Хранит в себе данные пользователя: user_id , login , name , surname (идентификатор, логин, имя и фамилию)   
 * Таблица pets : Содержит в себе информацию о питомцах пользователя: user_id, pet_id , type, nickname, breed (Идентификатор пользователя (внешний ключ), идентификатор животного, вид животного, его кличку и породу)
-  Напишите SQL-запрос, возвращающий фамилию и имя всех владельцев котов Абиссинской (Abyssinian) породы. ++ Отсортировать по алфавиту  
+  Напишите SQL-запрос, возвращающий фамилию и имя всех владельцев котов Абиссинской (Abyssinian) породы. + Отсортировать по алфавиту  
 
 SELECT DISTINCT (surname, name) FROM users JOIN pets  
 ON users. user_id = pets. user_id  
